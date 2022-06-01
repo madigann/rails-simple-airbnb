@@ -1,0 +1,12 @@
+
+
+<h1><%= @flat.name %>.
+<small>
+  <%= link_to flat_path(@flat.id), method: :delete, data: { confirm: "Delete #{@flat.name}?" } do %>
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+  <% end %>
+  <%= link_to edit_flat_path(@flat.id) %>
+    <i class="fa fa-pencil" aria-hidden="true"></i>
+</small>
+</h1>
+<p class="well"><%= @flat.description %></p>
